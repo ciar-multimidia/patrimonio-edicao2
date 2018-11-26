@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Patrimônio, Direitos Culturais e Cidadania</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	</head>
+	<body>
+	<div class="conjfaixas">
+		<div class="faixa">
+			<div class="caixa"></div>
+			<div class="cores">
+				
+			</div>
+		</div>
+		<div class="faixa">
+			<div class="cores">
+			</div>
+			<div class="caixa">
+				<div class="btmodulos">Continuar para os módulos <span class="seta">&#9654;</span></div>
+			</div>
+		</div>
+	</div>
+
+		
+	<div class="conteudo">
+		<p>CURSO DE ESPECIALIZAÇÃO INTERDISCIPLINAR EM</p>
+		<h1>Patrimônio, Direitos Culturais e Cidadania</h1>
+		<p>Governo Federal<br>
+		República Federativa do Brasil</p>
+		<p>Ministério da Educação</p>
+		<p>Coordenação de Aperfeiçoamento de Pessoal de Nível Superior<br>Universidade Federal de Goiás</p>
+		<p>Coordenação de Curso<br>
+		Ricardo Barbosa de Lima</p>
+		<p>Coordenação de Tutoria<br>
+		Marisa Damas Vieira</p>
+		<p>Goiânia, 2017</p>
+	</div>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var faixas = $('.conjfaixas'),
+					caixas = $('.caixa'),
+					btModulos = caixas.eq(1).find('.btmodulos').eq(0),
+					cores = $('.cores')
+					conteudo = $('.conteudo');
+				var animloop;
+				var abriu = false;
+				var corAtual = 1;
+				var nCores = 5;
+				var yMouse = 50;
+				var xMouseInicial;
+				var yMouseInicial;
+				var distanceMouse = 0;
+				var maxDistMouse = 200;
+
+				$(this).on('mousemove', function(event) {
+					yMouse = Math.round((event.pageX/$(this).width())*100);
+					if (abriu === true) {
+						if (xMouseInicial != undefined || yMouseInicial != undefined) {
+							var qtdeMovidaMouse = 
+							Math.round(
+								Math.sqrt(
+									(event.pageX - xMouseInicial)*(event.pageX - xMouseInicial) + 
+									(event.pageY - yMouseInicial)*(event.pageY - yMouseInicial)
+									)
+								);
+							distanceMouse += qtdeMovidaMouse;
+							if (distanceMouse >= maxDistMouse) {
+								animCores();
+								distanceMouse = 0;
+							}
+
+							
+						}
+					}
+
+					xMouseInicial = event.pageX; 
+					yMouseInicial = event.pageY; 
+				});
+
+				var animCores = function(){
+					cores.each(function(index, el) {
+						var faixacor = $('<div class="cor c'+corAtual+'"></div>');
+
+						$(el).append(faixacor);
+						var todascores = $(el).find('.cor');
+						if (todascores.length > nCores*4) {
+							todascores.eq(0).remove();
+						}
+						todascores.eq(todascores.length-1).css({
+							'left': (abriu === true ? yMouse+'%' : '50%'),
+							'width': '0%'
+						})
+						.animate({'left': '0', 'width': '100%'}, 700, 'linear');
+					});
+					if (corAtual == nCores) {
+						corAtual = 1;
+					}else {
+						corAtual++;
+					}	
+				};
+
+				var goModulos = function(){
+					var tempoLoop = 250;
+					var indice = -nCores;
+					for (var i = 0; i < nCores; i++) {
+						cores.append('<div class="cor c'+(nCores - i)+'"></div>');
+					}
+
+					var loopAddCores = setInterval(function(){
+						cores.each(function(index, el) {
+							$(el).children().eq(indice)
+							.css({
+								'left': '50%',
+								'width': '0%'
+							}).animate({
+								'left': '0%', 
+				 				'width': ((100/nCores)*(-indice))+'%'
+					 			} ,700, function() {
+					 				if (indice === 0) {
+					 					setTimeout(function(){
+					 						$(el).animate({'height': '50vh'}, 1000, function(){
+					 							window.location.href = 'cnt/index.html';
+					 						});
+					 					},1000)
+					 				}
+								});
+						});
+						
+						indice++;
+						if (indice === 0) {
+							clearInterval(loopAddCores);
+						} 
+					}, tempoLoop);
+					
+				}
+					
+				
+					
+				setTimeout(function(){
+					animCores();
+					animloop = setInterval(function(){
+						animCores();
+					}, 250);
+					cores
+					.animate({'height': '6px'}, 200, function(){
+						setTimeout(function(){
+							clearInterval(animloop);
+							abriu = true;
+							caixas.addClass('revela');
+							setTimeout(function(){
+								btModulos.addClass('visivel opacity');
+							}, 800);
+						},800);
+					});
+					
+				}, 500);
+
+				btModulos.on('click', function(event) {
+					abriu = false;
+					conteudo.animate({'opacity': '0'}, 300, function(){
+						conteudo.css('display', 'none');
+					})
+					btModulos.removeClass('visivel');
+					clearInterval(animloop);
+					faixas.addClass('final');
+					goModulos();
+				});
+
+			});
+		</script>
+
+	</body>
+</html>

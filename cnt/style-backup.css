@@ -1,0 +1,197 @@
+@charset "utf-8";
+@import url('fonts/fontface.css');
+@import url('css/bootstrap-glyphicons.css');
+@import url('css/bootstrap.css');
+@import url('css/jasny-bootstrap.css');
+@import url('css/jquery.fancybox.css');
+
+/*@ ------- LAYOUT ------- */
+body {
+  background: #FFF url('images/bg-inicio.jpg') no-repeat fixed right bottom;
+  background-size: cover;
+  overflow-x: hidden;
+  font-family: 'Wasabi Extra Light', Open Sans Regular, Tahoma, sans-serif;
+  letter-spacing: .04em;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+.container {
+  position: relative;
+  height: 100px
+}
+
+/*@ ------- PADROES DO LAYOUT ------- */
+a, a:link, a:hover, a:visited, a:focus, a:active {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+header, footer {
+  background: #260d29;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  color: #000;
+  margin: 0;
+  position: fixed;
+  padding: 0 40px;
+}
+
+header .marca-curso {
+  position: absolute;
+  margin-top: 10px;
+  text-align: left;
+  left: 40px;
+  color: #fff;
+  font-size: 30px;
+  text-transform: none;
+  line-height: 1.2em;
+}
+header .marca-curso span {
+  font-size: .7em;
+  display: block;
+}
+
+header .organizacao {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: right;
+  font-size: 1.3em;
+}
+
+
+section {
+  width: 100%;
+  height: calc(100vh - 200px);
+  position: fixed;
+  top: 100px;  
+  z-index: 3;
+}
+
+section div.modulo {
+  width: 20%;
+  height: 100%;
+  float: left;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;  
+}
+
+section div.modulo:nth-of-type(1) {
+  background: rgba(0, 164, 152, 0.7);
+  /*background: url('images/FundoModulo01.png') no-repeat 0px bottom;*/
+}
+section div.modulo:nth-of-type(2) {
+  background: rgba(169, 191, 93, 0.7);
+  /*background: url('images/FundoModulo02.png') no-repeat 20% bottom;*/
+}
+section div.modulo:nth-of-type(3) {
+  background: rgba(186, 94, 21, 0.7);
+  /*background: url('images/FundoModulo03.png') no-repeat 40% bottom;*/
+}
+section div.modulo:nth-of-type(4) {
+  background: rgba(182, 31, 63, 0.7);
+  /*background: url('images/FundoModulo04.png') no-repeat 60% bottom;*/
+}
+section div.modulo:nth-of-type(5) {
+  background: rgba(193, 152, 163, 0.5);
+  /*background: url('images/FundoModulo05.png') no-repeat 80% bottom;*/
+}
+
+
+section div.modulo div {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-50%);
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
+}
+
+section div.modulo:hover div {
+  transform: translateY(-50%) scale(1.1);
+}
+
+section div.modulo:hover:nth-of-type(1) {
+  background: rgba(0, 164, 152, 0.95);
+}
+section div.modulo:hover:nth-of-type(2) {
+  background: rgba(169, 191, 93, 0.95);
+}
+section div.modulo:hover:nth-of-type(3) {
+  background: rgba(186, 94, 21, 0.95);
+}
+section div.modulo:hover:nth-of-type(4) {
+  background: rgba(182, 31, 63, 0.95);
+}
+section div.modulo:hover:nth-of-type(5) {
+  background: rgba(193, 152, 163, 0.9);
+}
+
+section div.modulo a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+section div.modulo div span {
+  display: block;
+  font-size: 5em;
+}
+
+footer {
+  bottom: 0;
+}
+
+footer a {
+  background: #39203c;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin: 26px 15px 0 0;
+  float: left;
+}
+
+footer a:hover {
+  opacity: 0.8
+}
+
+footer img {
+  margin: 26px 0 0 0;
+  float: right;
+}
+
+
+/*@ =================================== RESPONSIVE ================================== */
+
+/* Large desktop */
+@media (min-width:1200px) {
+}
+@media (min-width:768px) and (max-width:979px) {
+}
+@media (min-width:992px) {
+}
+@media (max-width:992px) {
+}
+@media (max-width:767px) {
+}
+@media (max-width:720px) {
+
+  /*aside .panel-extra {width: 31%;}*/
+}
+@media (max-width:480px) {
+}
+@media (min-width:0) {
+}

@@ -1,0 +1,190 @@
+@import "css/bourbon/bourbon";
+
+@charset "utf-8";
+@import url('fonts/fontface.css');
+@import url('css/bootstrap-glyphicons.css');
+@import url('css/bootstrap.css');
+@import url('css/jasny-bootstrap.css');
+@import url('css/jquery.fancybox.css');
+
+/*@ ------- LAYOUT ------- */
+body {
+  
+  overflow-x: hidden;
+  font-family: 'Wasabi Extra Light', Open Sans Regular, Tahoma, sans-serif;
+  letter-spacing: .04em;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+html, body {
+  height: 100%;
+}
+.container {
+  position: relative;
+  height: 100px
+}
+
+/*@ ------- PADROES DO LAYOUT ------- */
+a, a:link, a:hover, a:visited, a:focus, a:active {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+#background{
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF url('images/bg-inicio.jpg') no-repeat fixed right bottom;
+  background-size: cover;
+
+}
+
+header, footer, section > div.modulo{
+  *{
+    opacity: 0;
+  }
+}
+
+header, footer {
+  background: #260d29;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  color: #000;
+  margin: 0;
+  position: fixed;
+  padding: 0 40px;
+}
+
+header {
+  .marca-curso {
+    position: absolute;
+    margin-top: 10px;
+    text-align: left;
+    left: 40px;
+    color: #fff;
+    font-size: 30px;
+    text-transform: none;
+    line-height: 1.2em;
+    span {
+      font-size: .7em;
+      display: block;
+    }
+  }
+
+  .organizacao {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    @include transform( translateY(-50%) );
+    color: #fff;
+    text-align: right;
+    font-size: 1.3em;
+  }
+}
+
+
+$barra: rgba(0, 164, 152, 0.7), rgba(169, 191, 93, 0.7), rgba(186, 94, 21, 0.7), rgba(182, 31, 63, 0.7), rgba(193, 152, 163, 0.5);
+
+section {
+  width: 100%;
+  height: calc(100vh - 200px);
+  position: fixed;
+  top: 100px;  
+  z-index: 3;
+  div.modulo {
+    width: 20%;
+    height: 100%;
+    float: left;
+    position: relative;
+    @include transition(background-color 0.2s ease-in-out);
+    
+    @for $i from 1 through 5 {
+       &:nth-of-type(#{$i}){
+        background-color: rgba( nth($barra, $i), 1);
+
+         &.normal{
+          background-color: nth($barra, $i);        
+         }
+         &:hover{
+          background-color: rgba( nth($barra, $i), 0.95);
+         }
+       }
+     }
+
+     div {
+       text-align: center;
+       color: #fff;
+       width: 100%;
+       font-size: 2em;
+       position: absolute;
+       top: 50%;
+       @include transition(transform 0.2s ease-in-out);
+       @include transform(translateY(-50%) );
+       text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
+       span {
+         display: block;
+         font-size: 5em;
+       }
+     }
+
+     &:hover div{
+      @include transform(translateY(-50%) scale(1.1) );
+     }
+  }
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+footer {
+  bottom: 0;
+  a {
+    background: #39203c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 26px 15px 0 0;
+    float: left;
+    &:hover {
+      opacity: 0.8
+    }
+  }
+
+  img {
+    margin: 26px 0 0 0;
+    float: right;
+  }
+}
+
+
+
+/*@ =================================== RESPONSIVE ================================== */
+
+/* Large desktop */
+@media (min-width:1200px) {
+}
+@media (min-width:768px) and (max-width:979px) {
+}
+@media (min-width:992px) {
+}
+@media (max-width:992px) {
+}
+@media (max-width:767px) {
+}
+@media (max-width:720px) {
+
+  /*aside .panel-extra {width: 31%;}*/
+}
+@media (max-width:480px) {
+}
+@media (min-width:0) {
+}

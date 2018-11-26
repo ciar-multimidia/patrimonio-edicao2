@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+	<head>
+		<title>Patrim&ocirc;nio, Direitos Culturais e Cidadania</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	</head>
+	<body class="home">
+		<div id="background"></div>
+		<header>
+			<div class="marca-curso"><span>Curso de Especialização Interdisciplinar em</span>Patrim&ocirc;nio, Direitos Culturais e Cidadania - 2ª Edição</div>
+			<div class="organizacao">Organização:<br>Marisa Damas Vieira</div>
+		</header>
+		<section>
+			<div class="modulo"><div>Módulo<span>1</span></div><a href="modulo1/index.html"></a></div>
+			<div class="modulo"><div>Módulo<span>2</span></div><a href="modulo2/index.html"></a></div>
+			<div class="modulo"><div>Módulo<span>3</span></div><a href="modulo3/index.html"></a></div>
+			<div class="modulo"><div>Módulo<span>4</span></div><a href="modulo4/index.html"></a></div>
+			<div class="modulo"><div>Módulo<span>5</span></div><a href="modulo5/index.html"></a></div>
+		</section>
+		<footer>
+			<a href="ficha-tecnica.html">Ficha técnica</a>
+			<a href="webconferencias/index.html">Webconferências 2018</a>
+			<img src="images/logos-ficha-tecnica.png" alt="">
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var transicaoOpacity = $('header, section > div.modulo, footer');
+				var divmodulos = $('section > div.modulo');
+				transicaoOpacity.find('*').animate({'opacity': '1'}, 200);
+				divmodulos.addClass('normal');
+			});
+		</script>
+	</body>
+</html>

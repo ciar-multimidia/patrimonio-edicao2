@@ -1,0 +1,360 @@
+/*@font-face {
+    font-family: 'Verlag Compressed Light';
+    src: url('verlagcompressed-light-webfont.eot');
+    src: url('verlagcompressed-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('verlagcompressed-light-webfont.woff') format('woff'),
+         url('verlagcompressed-light-webfont.ttf') format('truetype'),
+         url('verlagcompressed-light-webfont.svg#verlag_compressedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+/********************************************** WASABI **********************************************/
+
+
+@font-face {
+    font-family: 'Wasabi Bold';
+    src: url('wasabi-bd-webfont.eot');
+    src: url('wasabi-bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-bd-webfont.woff') format('woff'),
+         url('wasabi-bd-webfont.ttf') format('truetype'),
+         url('wasabi-bd-webfont.svg#wasabibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Bold Italic';
+    src: url('wasabi-bdit-webfont.eot');
+    src: url('wasabi-bdit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-bdit-webfont.woff') format('woff'),
+         url('wasabi-bdit-webfont.ttf') format('truetype'),
+         url('wasabi-bdit-webfont.svg#wasabibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Book';
+    src: url('wasabi-bk-webfont.eot');
+    src: url('wasabi-bk-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-bk-webfont.woff') format('woff'),
+         url('wasabi-bk-webfont.ttf') format('truetype'),
+         url('wasabi-bk-webfont.svg#wasabibook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Book Italic';
+    src: url('wasabi-bkit-webfont.eot');
+    src: url('wasabi-bkit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-bkit-webfont.woff') format('woff'),
+         url('wasabi-bkit-webfont.ttf') format('truetype'),
+         url('wasabi-bkit-webfont.svg#wasabibook_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Light';
+    src: url('wasabi-lt-webfont.eot');
+    src: url('wasabi-lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-lt-webfont.woff') format('woff'),
+         url('wasabi-lt-webfont.ttf') format('truetype'),
+         url('wasabi-lt-webfont.svg#wasabilight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Light Italic';
+    src: url('wasabi-ltit-webfont.eot');
+    src: url('wasabi-ltit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-ltit-webfont.woff') format('woff'),
+         url('wasabi-ltit-webfont.ttf') format('truetype'),
+         url('wasabi-ltit-webfont.svg#wasabilight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Medium';
+    src: url('wasabi-md-webfont.eot');
+    src: url('wasabi-md-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-md-webfont.woff') format('woff'),
+         url('wasabi-md-webfont.ttf') format('truetype'),
+         url('wasabi-md-webfont.svg#wasabimedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Medium Italic';
+    src: url('wasabi-mdit-webfont.eot');
+    src: url('wasabi-mdit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-mdit-webfont.woff') format('woff'),
+         url('wasabi-mdit-webfont.ttf') format('truetype'),
+         url('wasabi-mdit-webfont.svg#wasabimedium_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Thin';
+    src: url('wasabi-th-webfont.eot');
+    src: url('wasabi-th-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-th-webfont.woff') format('woff'),
+         url('wasabi-th-webfont.ttf') format('truetype'),
+         url('wasabi-th-webfont.svg#wasabithin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Thin Italic';
+    src: url('wasabi-thit-webfont.eot');
+    src: url('wasabi-thit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-thit-webfont.woff') format('woff'),
+         url('wasabi-thit-webfont.ttf') format('truetype'),
+         url('wasabi-thit-webfont.svg#wasabithin_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Extra Light';
+    src: url('wasabi-xlt-webfont.eot');
+    src: url('wasabi-xlt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-xlt-webfont.woff') format('woff'),
+         url('wasabi-xlt-webfont.ttf') format('truetype'),
+         url('wasabi-xlt-webfont.svg#wasabiextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Wasabi Extra Light Italic';
+    src: url('wasabi-xltit-webfont.eot');
+    src: url('wasabi-xltit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('wasabi-xltit-webfont.woff') format('woff'),
+         url('wasabi-xltit-webfont.ttf') format('truetype'),
+         url('wasabi-xltit-webfont.svg#wasabiextralight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/********************************************** YANONE **********************************************/
+
+@font-face {
+    font-family: 'Yanone Bold';
+    src: url('yanonekaffeesatz-bold-webfont.eot');
+    src: url('yanonekaffeesatz-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('yanonekaffeesatz-bold-webfont.woff') format('woff'),
+         url('yanonekaffeesatz-bold-webfont.ttf') format('truetype'),
+         url('yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Yanone Extra Light';
+    src: url('yanonekaffeesatz-extralight-webfont.eot');
+    src: url('yanonekaffeesatz-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('yanonekaffeesatz-extralight-webfont.woff') format('woff'),
+         url('yanonekaffeesatz-extralight-webfont.ttf') format('truetype'),
+         url('yanonekaffeesatz-extralight-webfont.svg#yanone_kaffeesatzextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Yanone Light';
+    src: url('yanonekaffeesatz-light-webfont.eot');
+    src: url('yanonekaffeesatz-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('yanonekaffeesatz-light-webfont.woff') format('woff'),
+         url('yanonekaffeesatz-light-webfont.ttf') format('truetype'),
+         url('yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Yanone Regular';
+    src: url('yanonekaffeesatz-regular-webfont.eot');
+    src: url('yanonekaffeesatz-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('yanonekaffeesatz-regular-webfont.woff') format('woff'),
+         url('yanonekaffeesatz-regular-webfont.ttf') format('truetype'),
+         url('yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/********************************************** OPEN SANS **********************************************/
+
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url('OpenSans-Italic-webfont.eot');
+    src: url('OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Italic-webfont.woff') format('woff'),
+         url('OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('OpenSans-Bold-webfont.eot');
+    src: url('OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Bold-webfont.woff') format('woff'),
+         url('OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Bold Italic';
+    src: url('OpenSans-BoldItalic-webfont.eot');
+    src: url('OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-BoldItalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('OpenSans-Light-webfont.eot');
+    src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Light-webfont.woff') format('woff'),
+         url('OpenSans-Light-webfont.ttf') format('truetype'),
+         url('OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Light Italic';
+    src: url('OpenSans-LightItalic-webfont.eot');
+    src: url('OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-LightItalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold';
+    src: url('OpenSans-Semibold-webfont.eot');
+    src: url('OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Semibold-webfont.woff') format('woff'),
+         url('OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Semibold Italic';
+    src: url('OpenSans-SemiboldItalic-webfont.eot');
+    src: url('OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-SemiboldItalic-webfont.svg#open_sanssemibold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Open Sans Extra Bold Italic';
+    src: url('OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-ExtraBoldItalic-webfont.svg#open_sansextrabold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Open Sans Extra Bold';
+    src: url('OpenSans-ExtraBold-webfont.eot');
+    src: url('OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

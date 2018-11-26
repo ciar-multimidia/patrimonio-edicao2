@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* ============= estilo ============= */
+
+@import "cnt/css/bourbon/bourbon";
+@import url('cnt/fonts/fontface.css');
+
+$roxo-escuro: #260d29;
+$roxo-claro: #39203C;
+$barra: #00A498, #A9BF5D, #BA5E15, #B61F3F, #D3BFC4;
+
+
+body{
+	height: 100vh;
+	overflow: hidden;
+	background-color: $roxo-claro;
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(center);
+	font-family: 'Wasabi Extra Light', Open Sans Regular, Tahoma, sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+
+}
+div.conteudo{
+	text-align: center;
+	color: white;
+	h1{
+		font-size: 9vh;
+	}
+
+	p{
+		font-size: 2.6vh;
+		@include transition(opacity 0.15s linear);
+		&.visivel{
+			opacity: 1;
+		}
+	}
+	*{
+		& + h1{
+			margin-top: 0em;
+		}
+
+		& + p{
+			margin-top: 0.9em;
+		}
+	}
+}
+div.conjfaixas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(space-between);
+	div.faixa{
+		@include display(flex);
+		@include flex-direction(column);
+		@include align-items(center);
+		width: 100%;
+		max-height: 50%;
+		@include flex-shrink(0);
+
+
+		div.caixa{
+			@include display(flex);
+			@include justify-content(center);
+			@include align-items(center);
+			@include flex-shrink(1);
+			width: 100%;
+			height: 50vh;
+			@include transition(height 0.6s ease-out);
+			background-color: $roxo-escuro;
+			&.revela{
+				height: 100px;
+			}
+
+			.btmodulos{
+				color: white;
+				font-size: 1.6em;
+				background-color: $roxo-claro;
+				padding: 0.3em 0.4em;
+				display: inline-block;
+				@include transform(translateY(100px));
+				opacity: 0;
+				pointer-events: none;
+				@include transition(all 0.2s ease-out);
+				@include transition-property(transform, background-color);
+
+				&.opacity{
+					opacity: 1;
+				}
+				
+				&.visivel{
+					pointer-events: auto;
+					@include transform(translateY(0px));
+					&:hover{
+						background-color: lighten($roxo-claro, 6%);
+						cursor: pointer;
+					}
+				}
+
+				span.seta{
+					margin-left: 0.3em;
+					font-size: 0.5em;
+					vertical-align: middle;
+				}
+			}
+		}
+		div.cores{
+			@include flex-shrink(0);
+			width: 100%;
+			height: 0px;
+			position: relative;
+			div.cor{
+				position: absolute;
+				top: 0;
+				height: 100%;
+				@for $i from 1 through 5{
+					&.c#{$i}{
+						background-color: nth($barra, $i);
+					}
+				}
+			}
+		}
+	}
+
+	&.final{
+		div.faixa{
+			div.caixa{
+				@include flex-shrink(0);
+			}
+			div.cores{
+				@include flex-shrink(1);
+			}
+		}
+	}
+}
+
+
+
+

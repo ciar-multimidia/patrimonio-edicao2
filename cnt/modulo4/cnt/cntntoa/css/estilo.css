@@ -1,0 +1,289 @@
+@import url(bootstrap.css);
+@import url(fontface.css);
+
+body {font-family: 'Open Sans Regular', sans-serif; margin: 0; padding: 0; position: relative;}
+
+a, a:link, a:hover {text-decoration: none;}
+
+
+/*pagina inicial*/
+body.inicio {background: rgba(67, 202, 204, 1); position: relative;height: 100%; height: 100vh;}
+a.marca-curso {background: url(../images/marca.svg) no-repeat; width: 600px; height: 131px; background-size: 100%; position: absolute; top: 30%; left: 50%; margin: 0 0 0 -300px; -webkit-animation: marca-curso-home 3s; -moz-animation: marca-curso-home 3s; -o-animation:   marca-curso-home 3s; animation: marca-curso-home 3s;}
+
+@-webkit-keyframes marca-curso-home {
+  0%   	{opacity: 0; height: 77px;}
+  20%   {opacity: 1; height: 77px;}
+  100% 	{opacity: 1; height: 131px}
+}
+
+@keyframes marca-curso-home {
+  0%   	{opacity: 0; height: 77px;}
+  20%   {opacity: 1; height: 77px;}
+  100% 	{opacity: 1; height: 131px}
+}
+
+a.btn-iniciar {width: 300px; padding: 15px 30px; background: rgba(209, 87, 79, 1); color: #fff; text-decoration: none; font-family: 'Open Sans Italic', sans-serif; text-shadow: 1px 1px 3px rgba(0,0,0,0.16); font-size: 2em; display: block; position: absolute; top: 50%; left: 50%; margin-left: -150px; text-align: center; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; opacity: 1; filter: alpha(opacity=100); -webkit-animation: btn-iniciar 3.6s; -moz-animation: btn-iniciar 3.6s; -o-animation:   btn-iniciar 3.6s; animation: marca-curso-home 3s;}
+a.btn-iniciar i {font-size: 0.7em; margin-right: -20px; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; opacity: 0; filter: alpha(opacity=0);}
+a.btn-iniciar:hover i {opacity: 1; filter: alpha(opacity=100);}
+
+@-webkit-keyframes btn-iniciar {
+  0%   	{opacity: 0;}
+  70%	{opacity: 0;}
+  100% 	{opacity: 1;}
+}
+
+@keyframes btn-iniciar {
+  0%   	{opacity: 0;}
+  100% 	{opacity: 1;}
+}
+
+
+/*interno*/
+a.marca-fixa {background: url(../images/marca.svg) no-repeat; background-size: contain; width: 239px; height: 52px; display: block; position: fixed; left: 20px; z-index: 4;}
+a.marca-fixa-ciar {background: url(../images/marca-ciar.svg) no-repeat; background-size: contain; width: 183px; height: 35px; display: block; position: fixed; bottom: 20px; right: 20px; z-index: 4;}
+a.marca-fixa, a.marca-fixa-ciar {opacity: 0.15; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+a.marca-fixa:hover, a.marca-fixa-ciar:hover {opacity: 1;}
+
+body.inicio a.marca-fixa-ciar {opacity: 1;}
+
+
+a.fica-tecnica {width: 180px; padding: 10px 18px; color: #000; background: #fff; position: fixed; bottom: 0; left: 50%; margin-left: -90px;}
+
+/*principal*/
+ul.navegacao-principal {margin: 0; padding: 0; list-style: none; height: 100%; height:100vh;}
+ul.navegacao-principal li {width: 100%; height: 33.33333333333334%; display: block; overflow: hidden; text-align: center; position: relative; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+ul.navegacao-principal li a, .menu-topo ul li a {color: #fff; text-decoration: none; font-family: 'Open Sans Italic', sans-serif; text-shadow: 1px 1px 3px rgba(0,0,0,0.16); font-size: 5em; width: 100%; height: 100%; display: block; position: absolute; line-height: 0; top: 50%; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out;}
+ul.navegacao-principal li a:hover,  .menu-topo ul li a:hover {text-shadow: 1px 1px 3px rgba(255,255,255,0.16);}
+
+ul.navegacao-principal li.formal, .menu-topo ul li.formal {background: rgba(67, 202, 204, 1)}
+ul.navegacao-principal li.formal:hover {background: rgba(67, 202, 204, .88)}
+ul.navegacao-principal li.formal:hover a, .menu-topo ul li.formal:hover a {color: rgba(27, 141, 143, 1)}
+
+ul.navegacao-principal li.nao-formal, .menu-topo ul li.nao-formal {background: rgba(169, 191, 93, 1)}
+ul.navegacao-principal li.nao-formal:hover {background: rgba(169, 191, 93, 0.88)}
+ul.navegacao-principal li.nao-formal:hover a, .menu-topo ul li.nao-formal:hover a {color: rgba(122, 145, 44, 1)}
+
+ul.navegacao-principal li.informal, .menu-topo ul li.informal {background: rgba(253, 179, 77, 1)}
+ul.navegacao-principal li.informal:hover {background: rgba(253, 179, 77, 0.88)}
+ul.navegacao-principal li.informal:hover a, .menu-topo ul li.informal:hover a {color: rgba(214, 127, 5, 1);}
+
+
+/*menu-topo*/
+.menu-topo {width: 100%; height: 70px; background: #fff; position: fixed; top: 0; right: 0}
+.menu-topo ul {width: 100%; position: relative; margin: 0; padding: 0; list-style-type: none;}
+.menu-topo ul li {width: 28%; float: left; height: 70px; position: relative; text-align: center;}
+.menu-topo ul li a {font-size: 1.7em}
+
+.menu-topo ul li.atividade {width: 16%; background: rgba(209, 87, 79, 1)}
+.menu-topo ul li.atividade a{font-size: 1.4em}
+.menu-topo ul li.atividade:hover a {color: rgba(170, 43, 36, 1);}
+
+
+/*paginas*/
+body.principal a.marca-fixa {top: 20px;}
+body.formal a.marca-fixa, body.nao-formal a.marca-fixa, body.informal a.marca-fixa, body.atividade a.marca-fixa {background-size: 100%; height: 29px; top: none; bottom: 20px; z-index: 10}
+body.formal a.marca-fixa:hover, body.formal a.marca-fixa-ciar:hover, body.nao-formal a.marca-fixa:hover, body.nao-formal a.marca-fixa-ciar:hover, body.informal a.marca-fixa:hover, body.informal a.marca-fixa-ciar:hover, body.atividade a.marca-fixa:hover, body.atividade a.marca-fixa-ciar:hover {opacity: 1}
+
+
+body.formal {background: rgba(67, 202, 204, 1)}
+body.nao-formal {background: rgba(169, 191, 93, 1)}
+body.informal {background: rgba(253, 179, 77, 1)}
+body.atividade {background: rgba(209, 87, 79, 1)}
+
+/*wrap-slider*/
+.wrap-slider {margin: 100px 0 0 0; width: 100%; height: 85vh; display: block; position: relative;}
+.carousel {height: 100%}
+
+.carousel-control.left, .carousel-control.right {background-image: none;}
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {left: 14%;}
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right {right: 33%;}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {font-size: 60px}
+
+
+.carousel.carousel-fade .item {-webkit-transition: opacity 0.5s ease-in-out; -moz-transition: opacity 0.5s ease-in-out; -ms-transition: opacity 0.5s ease-in-out; -o-transition: opacity 0.5s ease-in-out; transition: opacity 0.5s ease-in-out; opacity:0;}
+.carousel.carousel-fade .active.item {opacity:1;}
+.carousel.carousel-fade .active.left,
+.carousel.carousel-fade .active.right {left: 0;z-index: 2;opacity: 0;filter: alpha(opacity=0);}
+.carousel.carousel-fade .next,
+.carousel.carousel-fade .prev {left: 0;z-index: 1;}
+.carousel.carousel-fade .carousel-control {z-index: 3;}
+
+.content-slider {width: 85%; margin: 20px auto}
+
+.area-ilustracao {width: 50%; float: left; position: relative; display: block;}
+.area-ilustracao img {max-width: 100%; height: auto; max-height: 70vh; text-align: center; display: block; margin: 0 auto; border: 5px solid #fff; box-shadow: 2px 2px 2px rgba(0,0,0,0.2)}
+.area-texto {width: 50%; float: right; position: relative; display: block;}
+
+/*hx*/
+h1, h2 {font-family: 'Open Sans Italic', sans-serif; text-shadow: 1px 1px 3px rgba(0,0,0,0.16); font-size: 3em; color: #fff; text-align: center; letter-spacing: 1px}
+h2 {font-size: 2em}
+
+
+
+/*interno slide*/
+
+.content-slider {width: 85%; margin: 20px auto}
+.area-ilustracao {width: 50%; float: left; position: relative; display: block;}
+.area-texto {width: 50%; float: right; position: relative; display: block;}
+
+.conteudo-central {text-align: center;}
+
+p.item1, p.item2, p.item3, p.item4, p.item5, p.item6 {color: #fff; font-size: 1.5em; margin: 10px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.16);}
+
+.item1 {-webkit-animation: lista1 1.4s;
+  -moz-animation: lista1 1.4s;
+  -o-animation:   lista1 1.4s;
+  animation:      lista1 1.4s;}
+
+	@-webkit-keyframes lista1 {
+	  0%   { opacity: 0;}
+	  100% { opacity: 1;}
+	}
+
+	@keyframes lista1 {
+	  0%   { opacity: 0;}
+	  100% { opacity: 1;}
+	}
+
+.item2 {-webkit-animation: lista2 1.7s;
+  -moz-animation: lista2 1.7s;
+  -o-animation:   lista2 1.7s;
+  animation:      lista2 1.7s;}
+
+
+	@-webkit-keyframes lista2 {
+	  0%    {opacity: 0;}
+	  17%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+	@keyframes lista2 {
+	  0%    {opacity: 0;}
+	  17%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+.item3 {-webkit-animation: lista3 2s;
+  -moz-animation: lista3 2s;
+  -o-animation:   lista3 2s;
+  animation:      lista3 2s;}
+
+
+	@-webkit-keyframes lista3 {
+	  0%    {opacity: 0;}
+	  30%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+	@keyframes lista3 {
+	  0%    {opacity: 0;}
+	  30%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+.item4 {-webkit-animation: lista4 2.3s;
+  -moz-animation: lista4 2.3s;
+  -o-animation:   lista4 2.3s;
+  animation:      lista4 2.3s;}
+
+
+	@-webkit-keyframes lista4 {
+	  0%    {opacity: 0;}
+	  39%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}	
+
+	@keyframes lista4 {
+	  0%    {opacity: 0;}
+	  39%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}	
+
+.item4 {-webkit-animation: lista4 2.6s;
+  -moz-animation: lista4 2.6s;
+  -o-animation:   lista4 2.6s;
+  animation:      lista4 2.6s;}
+
+
+	@-webkit-keyframes lista4 {
+	  0%    {opacity: 0;}
+	  46%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}	
+
+
+	@keyframes lista4 {
+	  0%    {opacity: 0;}
+	  46%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}	
+
+.item5 {-webkit-animation: lista5 2.9s;
+  -moz-animation: lista5 2.9s;
+  -o-animation:   lista5 2.9s;
+  animation:      lista5 2.9s;}
+
+
+	@-webkit-keyframes lista5 {
+	  0%    {opacity: 0;}
+	  51%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+	@keyframes lista5 {
+	  0%    {opacity: 0;}
+	  51%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+.item6 {-webkit-animation: lista6 3.2s;
+  -moz-animation: lista6 3.2s;
+  -o-animation:   lista6 3.2s;
+  animation:      lista6 3.2s;}
+
+
+	@-webkit-keyframes lista6 {
+	  0%    {opacity: 0;}
+	  56%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}
+
+	@keyframes lista6 {
+	  0%    {opacity: 0;}
+	  56%	{opacity: 0}
+	  100%  {opacity: 1;}
+	}			
+
+
+ul.lista-atividade {width: 280px; margin: 0 auto}
+ul.lista-atividade li {color: #fff; font-size: 1.5em; margin: 10px 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.16); text-align: left; list-style-type: decimal;}
+
+
+/*imagens não formal*/
+.o-que-pode-acontecer {width: 83%; height: 70vh; margin: 0 auto; overflow: hidden; background: url(../images/naoformal1-1.jpg); display: block; position: relative; background-size: contain; background-position: center top; background-repeat: no-repeat; -webkit-animation: OQuePodeAcontecer 10s infinite;
+  -moz-animation: OQuePodeAcontecer 10s infinite;
+  -o-animation:   OQuePodeAcontecer 10s infinite;
+  animation:      OQuePodeAcontecer 10s infinite;}
+
+  /*.o-que-pode-acontecer img {height: }*/
+
+
+	@-webkit-keyframes OQuePodeAcontecer {
+	  0%    {background: url(../images/naoformal1-1.jpg); background-size: contain; background-position: center top;}
+	  16%	{background: url(../images/naoformal1-2.jpg); background-size: contain; background-position: center top;}
+	  32%  	{background: url(../images/naoformal1-3.jpg); background-size: contain; background-position: center top;}
+	  48%  	{background: url(../images/naoformal1-4.jpg); background-size: contain; background-position: center top;}
+	  64%  	{background: url(../images/naoformal1-5.jpg); background-size: contain; background-position: center top;}
+	  80%  	{background: url(../images/naoformal1-6.jpg); background-size: contain; background-position: center top;}
+	}
+
+	@keyframes OQuePodeAcontecer {
+	  0%    {background: url(../images/naoformal1-1.jpg); background-size: contain; background-position: center top;}
+	  16%	{background: url(../images/naoformal1-2.jpg); background-size: contain; background-position: center top;}
+	  32%  	{background: url(../images/naoformal1-3.jpg); background-size: contain; background-position: center top;}
+	  48%  	{background: url(../images/naoformal1-4.jpg); background-size: contain; background-position: center top;}
+	  64%  	{background: url(../images/naoformal1-5.jpg); background-size: contain; background-position: center top;}
+	  80%  	{background: url(../images/naoformal1-6.jpg); background-size: contain; background-position: center top;}
+	}		
+
+
